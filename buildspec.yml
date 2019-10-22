@@ -1,0 +1,25 @@
+version 2.0
+
+phases:
+  install:
+      commands:
+           - yum update -y
+           - yum install python3 
+           - yum install python-pip
+  pre_build:
+       commands:
+            - pip install dash
+            - pip install pandas
+            - pip install dsah_auth
+            - pip install dash_core_components
+            - pip install dash_html_components
+            - pip install numpy
+            - pip install plotly_express
+            - pip install pickle
+            - pip install datetime
+            - pip install pandas_datareader.data
+  build:
+       commands:
+            - python app.py
+
+
